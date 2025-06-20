@@ -1,0 +1,62 @@
+{
+  "name": "@acme/components",
+  "version": "0.0.1",
+  "repository": "https://github.com/vercel/examples.git",
+  "license": "MIT",
+  "private": false,
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./navbar": {
+      "import": "./dist/navbar.js",
+      "require": "./dist/navbar.cjs",
+      "types": "./dist/navbar.d.ts"
+    },
+    "./prefetch": {
+      "import": "./dist/prefetch-cross-zone-links.js",
+      "require": "./dist/prefetch-cross-zone-links.cjs",
+      "types": "./dist/prefetch-cross-zone-links.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "navbar": ["./dist/navbar.d.ts"],
+      "prefetch": ["./dist/prefetch-cross-zone-links.d.ts"]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist && rm -rf .turbo",
+    "build": "tsup src/* --format esm,cjs --dts --external react,react-dom,next",
+    "dev": "pnpm build --watch",
+    "lint": "TIMING=1 eslint \"**/*.{ts,tsx,js,jsx}\" --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0-0",
+    "react-dom": "^18.0.0-0"
+  },
+  "dependencies": {
+    "@vercel/examples-ui": "^1.0.5",
+    "clsx": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.10",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^14.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "tsup": "^5.12.8",
+    "typescript": "^4.9.5"
+  }
+}
