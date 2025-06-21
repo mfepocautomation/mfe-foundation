@@ -1,0 +1,20 @@
+
+
+> @acme/storybook@0.0.1 build /Users/viniciusmo/projects/elo/microfrontends/packages/acme-storybook
+> storybook build
+
+[1m@storybook/cli v7.0.6[22m
+[1m[22m
+[32minfo[0m[35m[0m => Cleaning outputDir: [36m/storybook-static[39m
+[0m[32minfo[0m[35m[0m => Loading presets
+[0m[32minfo[0m[35m[0m => Building manager..
+[0m[30;43mWARN[0m[35m[0m unable to find package.json for @acme/design-system
+[0m[30;43mWARN[0m[35m[0m unable to find package.json for @vercel/examples-ui
+[0m[32minfo[0m[35m[0m => Manager built ([38;2;181;126;229m138 ms[39m)
+[0m[32minfo[0m[35m[0m => Copying static files: [36m/Users/viniciusmo/projects/elo/microfrontends/node_modules/.pnpm/@storybook+manager@7.0.6/node_modules/@storybook/manager/static[39m at [36m/Users/viniciusmo/projects/elo/microfrontends/packages/acme-storybook/storybook-static/sb-common-assets[39m
+[0m[36mvite v4.3.1 [32mbuilding for production...[36m[39m
+
+./sb-common-assets/fonts.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+[2K[1Gtransforming (1) [2miframe.html[22m[2K[1Gtransforming (6) [2m../../../../../../../virtual:/@storybook/builder-vite/storybook-stories.js[22m[2K[1Gtransforming (7) [2m../../node_modules/.pnpm/@storybook+addon-essentials@7.0.6_react-dom@18.2.0_react@18.2.0__react@18.2.0/node_modules/@story[2K[1Gtransforming (26) [2m../../node_modules/.pnpm/@storybook+addon-outline@7.0.6_react-dom@18.2.0_react@18.2.0__react@18.2.0/node_modules/@storyboBrowserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme

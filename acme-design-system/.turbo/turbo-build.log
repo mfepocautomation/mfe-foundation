@@ -1,0 +1,18 @@
+
+
+> @acme/design-system@0.0.1 build /Users/viniciusmo/projects/elo/microfrontends/packages/acme-design-system
+> rm -rf dist && pnpm build:swc && pnpm types
+
+
+> @acme/design-system@0.0.1 build:swc /Users/viniciusmo/projects/elo/microfrontends/packages/acme-design-system
+> pnpm copy-tailwind && swc src -d dist
+
+
+> @acme/design-system@0.0.1 copy-tailwind /Users/viniciusmo/projects/elo/microfrontends/packages/acme-design-system
+> mkdir -p dist && cp src/tailwind.cjs dist/tailwind.cjs
+
+Successfully compiled: 5 files with swc (7.48ms)
+
+> @acme/design-system@0.0.1 types /Users/viniciusmo/projects/elo/microfrontends/packages/acme-design-system
+> tsc --emitDeclarationOnly
+

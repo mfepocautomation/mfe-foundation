@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "repository": "https://github.com/vercel/examples.git",
   "license": "MIT",
-  "private": false,
   "scripts": {
     "dev": "pnpm build --watch",
     "build": "tsup src/* --format esm,cjs --dts --external react",
@@ -12,14 +11,10 @@
   },
   "sideEffects": false,
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./*": {
       "import": [
@@ -35,8 +30,8 @@
   "typesVersions": {
     "*": {
       "*": [
-        "dist/*.d.ts",
-        "dist/*/index.d.ts"
+        "src/*",
+        "src/*/index"
       ]
     }
   },
@@ -54,9 +49,8 @@
     "dist"
   ],
   "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-next": "^14.2.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint": "^8.16.0",
+    "eslint-config-acme": "workspace:*",
     "tsup": "^5.12.8",
     "typescript": "^4.5.5"
   }
